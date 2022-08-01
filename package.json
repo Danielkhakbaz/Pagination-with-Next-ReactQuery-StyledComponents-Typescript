@@ -6,19 +6,34 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx",
+    "check-all": "yarn check-types && yarn check-format && yarn check-lint",
+    "fix": "next lint --fix && prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "eslint-config-prettier": "^8.5.0",
     "next": "12.2.3",
+    "prettier": "^2.7.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-query": "^4.0.0",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@types/node": "18.6.3",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
-    "eslint": "8.21.0",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": ">=5.16.0",
+    "eslint-config-google": "^0.14.0",
     "eslint-config-next": "12.2.3",
+    "eslint-plugin-react": "^7.30.1",
+    "husky": "^8.0.0",
     "typescript": "4.7.4"
   }
 }

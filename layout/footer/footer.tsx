@@ -24,16 +24,16 @@ const Footer: React.FC = () => {
   return (
     <>
       <Main>
-        <Link href="/">
+        <Link href="/" passHref>
           <LinkStyle>Terms</LinkStyle>
         </Link>
-        <Link href="/">
+        <Link href="/" passHref>
           <LinkStyle>Privacy Policy</LinkStyle>
         </Link>
-        <Link href="/">
+        <Link href="/" passHref>
           <LinkStyle>Github</LinkStyle>
         </Link>
-        <Link href="/I-DONT-KNOW-WHERE-YOU-ARE">
+        <Link href="/I-DONT-KNOW-WHERE-YOU-ARE" passHref>
           <LinkStyle>404</LinkStyle>
         </Link>
       </Main>

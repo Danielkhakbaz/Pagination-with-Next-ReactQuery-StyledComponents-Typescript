@@ -1,5 +1,40 @@
 import Head from "next/head";
 import Link from "next/link";
+import styled from "styled-components";
+
+type TitleProps = {
+  secondary?: boolean;
+};
+
+const Main = styled.main`
+  min-height: 100%;
+  background: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+`;
+
+const Title = styled.strong<TitleProps>`
+  font-size: ${(props) => (props.secondary ? "3.75rem" : "2rem")};
+  line-height: 1;
+`;
+
+const HomeButton = styled.button`
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1.5rem;
+`;
 
 const NotFound: React.FC = () => {
   return (
@@ -8,16 +43,15 @@ const NotFound: React.FC = () => {
         <title>404 | Pagination App</title>
       </Head>
 
-      <main className="min-h-screen bg-white text-black flex flex-col justify-center items-center gap-8 text-center">
-        <header className="absolute top-0 pt-10"></header>
-        <strong className="text-6xl">Oops!</strong>
-        <p className="text-2xl">404 - Page not found!</p>
+      <Main>
+        <Title>Oops!</Title>
+        <Title secondary>404 - Page not found!</Title>
         <Link href="/">
-          <button className="bg-black text-white flex flex-row justify-center items-center gap-2 text-center rounded-3xl px-6 py-2">
+          <HomeButton>
             <span>Back to home</span>
-          </button>
+          </HomeButton>
         </Link>
-      </main>
+      </Main>
     </>
   );
 };

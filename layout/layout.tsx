@@ -18,6 +18,7 @@ const Main = styled.div`
   width: 100%;
   height: 90vh;
   margin: 0 auto;
+  padding: 10px 0;
 `;
 
 const Layout: React.FC<Props> = ({ children }) => {

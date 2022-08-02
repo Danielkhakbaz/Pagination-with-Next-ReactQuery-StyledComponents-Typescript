@@ -5,7 +5,7 @@ type PageContextTypes = {
 };
 
 export const PageContextDefaultValue: PageContextTypes = {
-  page: "planets",
+  page: "",
 };
 
 type PageActionTypes = {

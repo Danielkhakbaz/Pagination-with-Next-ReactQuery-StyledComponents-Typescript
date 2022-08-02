@@ -8,7 +8,7 @@ type Props = {
 
 const PageProvider: React.FC<Props> = ({ children }) => {
   const initialState = {
-    page: "planets",
+    page: "",
   };
   const [state, dispatch] = useReducer(PageReducers, initialState);
 

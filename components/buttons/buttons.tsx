@@ -2,14 +2,10 @@ import styled from "styled-components";
 import { usePageAction } from "../../providers/page/page-context";
 import { PageActions } from "../../providers/page/page-actions";
 
-type ButtonsType = {
-  planets?: boolean;
-};
-
-const Button = styled.button<ButtonsType>`
+const Button = styled.button`
   font-size: 1.2rem;
-  background: ${(props) => (props.planets ? "transparent" : "#ccc")};
-  color: ${(props) => (props.planets ? "#ccc" : "#222")};
+  background: transparent;
+  color: #ccc;
   border: 3px solid #ccc;
   border-radius: 20px;
   cursor: pointer;
@@ -17,9 +13,9 @@ const Button = styled.button<ButtonsType>`
   margin: 0 10px;
   padding: 10px;
 
-  &:hover {
-    background: ${(props) => (props.planets ? "#ccc" : "transparent")};
-    color: ${(props) => (props.planets ? "#222" : "#ccc")};
+  &:focus {
+    background: #ccc;
+    color: #222;
   }
 `;
 
@@ -29,7 +25,6 @@ const Buttons: React.FC = () => {
   return (
     <>
       <Button
-        planets
         onClick={() =>
           dispatch({ type: PageActions.CHANGE_PAGE, payload: "planets" })
         }>

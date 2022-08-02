@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
       <>
         <Buttons />
-        {page === "planets" ? <Planets /> : <People />}
+        {page && (page === "planets" ? <Planets /> : <People />)}
       </>
     </>
   );

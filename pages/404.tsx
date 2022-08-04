@@ -17,12 +17,10 @@ const Main = styled.main`
   gap: 2rem;
   text-align: center;
 `;
-
 const Title = styled.strong<TitleProps>`
-  font-size: ${(props) => (props.secondary ? "3.75rem" : "2rem")};
+  font-size: ${({ secondary }) => (secondary ? "3.75rem" : "2rem")};
   line-height: 1;
 `;
-
 const HomeButton = styled.button`
   background: black;
   color: white;

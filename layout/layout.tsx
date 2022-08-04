@@ -14,7 +14,6 @@ const Wrapper = styled.div`
   text-align: center;
   margin: 0;
 `;
-
 const Main = styled.div`
   width: 960px;
   height: 90%;

@@ -5,14 +5,14 @@ import Compose from "../utils/compose";
 import PageProvider from "../providers/page/page-provider";
 import Layout from "../layout/layout";
 
+const Providers = [PageProvider, Layout];
+
+const queryClient = new QueryClient();
+
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
   }`;
-
-const Providers = [PageProvider, Layout];
-
-const queryClient = new QueryClient();
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (

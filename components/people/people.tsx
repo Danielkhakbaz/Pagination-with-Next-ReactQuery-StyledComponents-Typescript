@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
+import Person from "./person/person";
 import { fetchPeople } from "../../services/queries";
-import Person from "../person/person";
+import { PersonType } from "../../types/person";
 
 const People: React.FC = () => {
   const { data } = useQuery(["people"], fetchPeople);
@@ -8,7 +9,7 @@ const People: React.FC = () => {
   return (
     <>
       <h2>People</h2>
-      {data?.results.map((person: any) => (
+      {data?.results.map((person: PersonType) => (
         <Person key={person.name} person={person} />
       ))}
     </>

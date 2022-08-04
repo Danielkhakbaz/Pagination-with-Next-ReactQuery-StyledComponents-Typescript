@@ -7,10 +7,9 @@ type Props = {
 };
 
 const PageProvider: React.FC<Props> = ({ children }) => {
-  const initialState = {
+  const [state, dispatch] = useReducer(PageReducers, {
     page: "",
-  };
-  const [state, dispatch] = useReducer(PageReducers, initialState);
+  });
 
   return (
     <PageContext.Provider value={{ ...state }}>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-const Main = styled.footer`
+const Wrapper = styled.footer`
   height: 10%;
   background: black;
   display: flex;
@@ -10,8 +10,7 @@ const Main = styled.footer`
   gap: 2rem;
   padding: 2.5rem 0;
 `;
-
-const LinkStyle = styled.a`
+const LinkAnchor = styled.a`
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -24,20 +23,20 @@ const LinkStyle = styled.a`
 const Footer: React.FC = () => {
   return (
     <>
-      <Main>
+      <Wrapper>
         <Link href="/" passHref>
-          <LinkStyle>Terms</LinkStyle>
+          <LinkAnchor>Terms</LinkAnchor>
         </Link>
         <Link href="/" passHref>
-          <LinkStyle>Privacy Policy</LinkStyle>
+          <LinkAnchor>Privacy Policy</LinkAnchor>
         </Link>
         <Link href="/" passHref>
-          <LinkStyle>Github</LinkStyle>
+          <LinkAnchor>Github</LinkAnchor>
         </Link>
         <Link href="/I-DONT-KNOW-WHERE-YOU-ARE" passHref>
-          <LinkStyle>404</LinkStyle>
+          <LinkAnchor>404</LinkAnchor>
         </Link>
-      </Main>
+      </Wrapper>
     </>
   );
 };

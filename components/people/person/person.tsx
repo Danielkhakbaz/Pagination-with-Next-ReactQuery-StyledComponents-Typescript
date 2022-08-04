@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { PersonType } from "../../../types/person";
 
 type Props = {
-  person: any;
+  person: PersonType;
 };
 
 const Card = styled.div`

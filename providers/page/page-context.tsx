@@ -1,18 +1,18 @@
 import { createContext, useContext } from "react";
 
-type PageContextTypes = {
+type PageContextType = {
   page: string;
 };
 
-export const PageContextDefaultValue: PageContextTypes = {
+export const PageContextDefaultValue: PageContextType = {
   page: "",
 };
 
-type PageActionTypes = {
-  dispatch?: any;
+type PageActionType = {
+  dispatch?: Function | any;
 };
 
-export const PageActionDefaultValue: PageActionTypes = {
+export const PageActionDefaultValue: PageActionType = {
   dispatch: () => {},
 };
 

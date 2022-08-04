@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { PlanetType } from "../../../types/planet";
+import { numberWithCommas } from "../../../utils/numberDivider";
 
 type Props = {
-  planet: any;
+  planet: PlanetType;
 };
 
 const Card = styled.div`
@@ -17,10 +19,6 @@ const CardParagraph = styled.p`
   color: #999;
   margin: 6px 0;
 `;
-
-function numberWithCommas(string: String) {
-  return string.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
 
 const Planet: React.FC<Props> = ({ planet }) => {
   return (

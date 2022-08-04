@@ -2,6 +2,7 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const Main = styled.footer`
+  height: 10%;
   background: black;
   display: flex;
   justify-content: center;

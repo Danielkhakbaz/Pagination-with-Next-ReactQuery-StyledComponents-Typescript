@@ -1,30 +1,10 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import styled from "styled-components";
-import Planet from "./planet/planet";
 import Spinner from "../spinner/spinner";
+import Planet from "./planet/planet";
 import { fetchPlanets } from "../../services/queries/index";
-import { PlanetType } from "../../types/planet";
-
-const ButtonWrapper = styled.div`
-  text-align: center;
-  padding: 10px 0;
-`;
-const Button = styled.button`
-  font-size: 0.75rem;
-  background: #ccc;
-  border: 3px solid #ccc;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-  margin: 0 10px;
-  padding: 10px;
-
-  &:active {
-    background: transparent;
-    color: #ccc;
-  }
-`;
+import { PlanetType } from "../../types/planet-type";
+import { ButtonWrapper, Button } from "./planets.styled";
 
 const Planets: React.FC = () => {
   const [page, setPage] = useState<number>(1);

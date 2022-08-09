@@ -14,7 +14,7 @@ const LoadingSpinner = styled.div`
   height: 8rem;
   animation: spinningButton 0.8s linear infinite;
   border: 0.4rem solid #ccc;
-  border-top: 0.4rem solid #111827;
+  border-top: 0.4rem solid #1b1b1b;
   border-radius: 50%;
   margin: 1.4rem auto;
 
@@ -23,7 +23,7 @@ const LoadingSpinner = styled.div`
     height: 6rem;
     animation: spinningButton 0.8s linear infinite;
     border: 0.4rem solid #ccc;
-    border-top: 0.4rem solid #111827;
+    border-top: 0.4rem solid #1b1b1b;
     border-radius: 50%;
     margin: 1.4rem auto;
   }

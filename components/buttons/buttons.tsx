@@ -26,13 +26,13 @@ const Buttons: React.FC = () => {
     <>
       <Button
         onClick={() =>
-          dispatch({ type: PageActions.CHANGE_PAGE, payload: "planets" })
+          dispatch({ type: PageActions.CHANGE_CONTENT, payload: "planets" })
         }>
         Planets
       </Button>
       <Button
         onClick={() =>
-          dispatch({ type: PageActions.CHANGE_PAGE, payload: "people" })
+          dispatch({ type: PageActions.CHANGE_CONTENT, payload: "people" })
         }>
         People
       </Button>

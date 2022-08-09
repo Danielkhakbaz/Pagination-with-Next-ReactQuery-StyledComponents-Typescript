@@ -8,7 +8,7 @@ type Props = {
 
 const PageProvider: React.FC<Props> = ({ children }) => {
   const [state, dispatch] = useReducer(PageReducers, {
-    page: "",
+    content: "",
   });
 
   return (

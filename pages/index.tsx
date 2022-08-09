@@ -5,7 +5,7 @@ import Planets from "../components/planets/planets";
 import People from "../components/people/people";
 
 const Home: NextPage = () => {
-  const { page } = usePageContext();
+  const { content } = usePageContext();
 
   return (
     <>
@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <title>Home | Pagination App</title>
       </Head>
 
-      <>{page && (page === "planets" ? <Planets /> : <People />)}</>
+      <>{content && (content === "planets" ? <Planets /> : <People />)}</>
     </>
   );
 };

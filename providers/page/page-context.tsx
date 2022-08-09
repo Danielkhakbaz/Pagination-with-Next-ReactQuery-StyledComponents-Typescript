@@ -1,11 +1,11 @@
 import { createContext, useContext } from "react";
 
 type PageContextType = {
-  page: string;
+  content: string;
 };
 
 export const PageContextDefaultValue: PageContextType = {
-  page: "",
+  content: "",
 };
 
 type PageActionType = {

@@ -5,12 +5,14 @@ const client = axios.create({
   baseURL: API.baseURL,
 });
 
-export const fetchPlanets = async () => {
-  const { data } = await client.get("/planets");
+/* eslint-disable @typescript-eslint/no-unused-vars */
+export const fetchPlanets = async ({ queryKey: [_, page] }: any) => {
+  const { data } = await client.get(`/planets?page=${page}`);
   return data;
 };
 
-export const fetchPeople = async () => {
-  const { data } = await client.get("/people");
+export const fetchPeople = async ({ queryKey: [_, page] }: any) => {
+  const { data } = await client.get(`/people?page=${page}`);
   return data;
 };
+/* eslint-disable @typescript-eslint/no-unused-vars */
